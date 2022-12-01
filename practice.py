@@ -84,6 +84,20 @@ def near_hundred(n):
 
 # Warmup-1
 # Source: CodingBat
+# https://codingbat.com/prob/p149524
+# missing_char
+# Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).
+
+# This was my solution.  It seems clunky.  Also, it's my understanding they wanted this done without loop.  How do you do it without a loop?
+
+# Here's the CodingBat solution.  Oh, they used slicing!  That eliminates the need for iteration.  And there's no need to evaulate each char.  They give you the index position to exclude.
+
+def missing_char(str, n):
+  front = str[:n]   # up to but not including n
+  back = str[n+1:]  # n+1 through end of string
+  return front + back
+  
+
 
 
 
