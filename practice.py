@@ -11,7 +11,8 @@ def sleep_in(weekday, vacation):
     return True
   else:
     return False
-    
+
+
 # A cleaner way to do it (and the official solution) was:
 
 def sleep_in(weekday, vacation):
@@ -63,12 +64,26 @@ def diff21(n):
 
 ###################################
 
+# Warmup-1
+# Source: CodingBat
+# https://codingbat.com/prob/p124676
+# near_hundred
+# Given an int n, return True if it is within 10 of 100 or 200. Note: abs(num) computes the absolute value of a number.
+
+def near_hundred(n):
+  return((abs(n-100)<=10) or (abs(n-200)<=10))
 
 
+# My solution was nearly identical to the CodingBat solution:
+def near_hundred(n):
+  return ((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
 
+# And I got my first gold star on the site for that solution!
 
+###################################
 
-
+# Warmup-1
+# Source: CodingBat
 
 
 
