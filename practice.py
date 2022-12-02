@@ -88,7 +88,7 @@ def near_hundred(n):
 # missing_char
 # Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).
 
-# This was my solution.  It seems clunky.  Also, it's my understanding they wanted this done without loop.  How do you do it without a loop?
+# My first solution used a for loop to iterate over the string, build a new string from the chars that are not index position n. It was very clunky and awkward.  Also, it's my understanding they wanted this done without loop, though I did it anyway.  I couldn't see how to do it without iterating over the string.  The code was so bad I didn't even copy it over here!
 
 # Here's the CodingBat solution.  Oh, they used slicing!  That eliminates the need for iteration.  And there's no need to evaulate each char.  They give you the index position to exclude.
 
@@ -97,6 +97,44 @@ def missing_char(str, n):
   back = str[n+1:]  # n+1 through end of string
   return front + back
   
+# I erased my code, re-did some of the other warmups, and tried it again.
+# This is what I did the second time, with the new knowledge about slicing.  Basically the same thing as the official solution.
+
+def missing_char(str, n):
+  new_string = str[:n] + str[n+1::]
+  return new_string
+
+###################################
+
+# Warmup-1
+# Source: CodingBat
+# https://codingbat.com/prob/p120546
+# monkey_trouble
+# We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return True if we are in trouble.
+
+# Here's my solution:
+def monkey_trouble(a_smile, b_smile):
+  return ((a_smile and b_smile) or (not a_smile and not b_smile))
+
+# I thought the task was straightforward.  It's helping me get more familiar with logic operations.
+
+# Here's the solution provided by CodingBat:
+
+def monkey_trouble(a_smile, b_smile):
+  if a_smile and b_smile:
+    return True
+  if not a_smile and not b_smile:
+    return True
+  return False
+  ## The above can be shortened to:
+  ##   return ((a_smile and b_smile) or (not a_smile and not b_smile))
+  ## Or this very short version (think about how this is the same as the above)
+  ##   return (a_smile == b_smile)
+  
+# I think that last line is brilliant!  Looking forward to this becoming second nature.
+
+######################
+
 
 
 
