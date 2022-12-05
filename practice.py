@@ -133,7 +133,36 @@ def monkey_trouble(a_smile, b_smile):
   
 # I think that last line is brilliant!  Looking forward to this becoming second nature.
 
-######################
+###################################
+
+# Warmup-1
+# Source: CodingBat
+# https://codingbat.com/prob/p166884
+# parrot_trouble
+# We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return True if we are in trouble.
+
+# My solution:
+
+def parrot_trouble(talking, hour):
+  return((talking) and (hour < 7 or hour > 20))
+  
+# At first I had a logic error because I tried to do this:
+# return((talking and hour < 7) and (talking and hour > 20))
+# Once I fixed that error, it ran perfect.
+# Got my second gold star for this one!!
+
+# This was the solution from CodingBat:
+
+def parrot_trouble(talking, hour):
+  return (talking and (hour < 7 or hour > 20))
+  # Need extra parenthesis around the or clause
+  # since and binds more tightly than or.
+  # and is like arithmetic *, or is like arithmetic +
+  
+###################################
+
+# Warmup-1
+# Source: CodingBat
 
 
 
