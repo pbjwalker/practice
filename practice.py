@@ -163,7 +163,73 @@ def parrot_trouble(talking, hour):
 
 # Warmup-1
 # Source: CodingBat
+# https://codingbat.com/prob/p162058
+# pos_neg
+# Given 2 int values, return True if one is negative and one is positive. Except if the parameter "negative" is True, then return True only if both are negative.
 
+# my first try
+def pos_neg(a, b, negative):
+  if (negative and ((a < 0) and (b < 0))) or (not ((a > 0) and (b > 0))):
+    return True
+  else:
+    return False
+
+
+# my second try
+def pos_neg(a, b, negative):
+  if negative:
+    if (a < 0) and (b < 0):
+      return True
+    else:
+      return False
+  else:
+    if not ((a > 0) and (b > 0)):
+      return True
+    elif (a < 0) and (b < 0):
+      return True
+    else:
+      return False
+
+# my third try!
+def pos_neg(a, b, negative):
+  if negative:
+    if (a < 0) and (b < 0):
+      return True
+    else:
+      return False
+  else:
+    if (a < 0) and (b < 0):
+      return False
+    elif (a < 0) and (b < 0):
+      return True
+    else:
+      return True
+
+So close! Getting this logic right is not easy!
+
+# my fourth try!!!
+def pos_neg(a, b, negative):
+  if negative:
+    if (a < 0) and (b < 0):
+      return True
+    else:
+      return False
+  elif (a < 0) and (b < 0):
+    return False
+  elif (a > 0) and (b > 0):
+    return False
+  else:
+      return True
+
+# OK, finally got it. Got to be very careful with logic, for sure! My solution was really ugly and hard to read.
+# Here's the CodingBat solution. It is so simple and streamlined!! Well, everyone starts somewhere. Practice, practice, practice.
+
+def pos_neg(a, b, negative): if negative: return (a < 0 and b < 0) else: return ((a < 0 and b > 0) or (a > 0 and b < 0))
+
+###################################
+
+# Warmup-1
+# Source: CodingBat
 
 
 
