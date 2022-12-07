@@ -230,6 +230,37 @@ def pos_neg(a, b, negative): if negative: return (a < 0 and b < 0) else: return 
 
 # Warmup-1
 # Source: CodingBat
+# https://codingbat.com/prob/p153599
+# front_back
+# Given a string, return a new string where the first and last chars have been exchanged.
+
+def front_back(str):
+  if len(str) == 1:
+    return str
+  else:
+    return str[-1::] + str[1:len(str)-1] + str[0:1]
+    
+# I had a little trouble with the syntax on this one
+# I think it's related to doing the code in the browser on the site
+# Had to do a lot of trial-and-error to get the syntax right for the website compiler
+# My solution turned out quite a bit like their solution. Here's theirs:
+
+def front_back(str):
+  if len(str) <= 1:
+    return str
+  
+  mid = str[1:len(str)-1]  # can be written as str[1:-1]
+  
+  # last + mid + first
+  return str[len(str)-1] + mid + str[0]
+  
+###################################
+
+# Warmup-1
+# Source: CodingBat
+
+
+
 
 
 
