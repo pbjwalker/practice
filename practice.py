@@ -258,6 +258,35 @@ def front_back(str):
 
 # Warmup-1
 # Source: CodingBat
+# https://codingbat.com/prob/p141905
+# sum_double
+# Given two int values, return their sum. Unless the two values are the same, then return double their sum.
+
+def sum_double(a, b):
+  if a==b:
+    return (a+b)*2
+  else:
+    return a+b
+
+# This practice problem seemed unnecessarily easy.
+# I received a gold star for this one.
+# Here's the CodingBat solution.  Similar, but they separated the sum and doubling operations and used variables.
+
+def sum_double(a, b):
+  # Store the sum in a local variable
+  sum = a + b
+  
+  # Double it if a and b are the same
+  if a == b:
+    sum = sum * 2
+  return sum
+  
+###################################
+
+# Warmup-1
+# Source: CodingBat
+
+
 
 
 
