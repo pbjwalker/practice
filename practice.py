@@ -3,7 +3,6 @@
 # https://codingbat.com/prob/p173401
 # sleep_in
 # The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return True if we sleep in.
-
 # This was my solution:
 
 def sleep_in(weekday, vacation):
@@ -302,6 +301,70 @@ def makes10(a, b):
 
 # Warmup-1
 # Source: CodingBat
+# https://codingbat.com/prob/p189441
+# not_string
+# Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged. 
+# This is my solution:
+
+def not_string(str):
+  if str[:3]=="not":
+    return str
+  else:
+    return "not " + str
+
+# The CodingBat solution also checks the length of the string.
+# This is a better solution because if the string is less than 3 characters, my solution will throw an error.
+
+def not_string(str):
+  if len(str) >= 3 and str[:3] == "not":
+    return str
+  return "not " + str
+  # str[:3] goes from the start of the string up to but not
+  # including index 3
+
+###################################
+
+# Warmup-1
+# Source: CodingBat
+# https://codingbat.com/prob/p147920
+# front3
+# Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+# Here's my solution:
+
+def front3(str):
+  if len(str) >= 3:
+    return (str[0] + str[1] + str[2] ) *3
+  elif len(str)==2:
+    return (str[0] + str[1] ) *3
+  elif len(str)==1:
+    return str[0]*3
+  else:
+    return (str[:0]*3)
+
+# This looks really ugly and clunky to me.  I wanted to use slicing, but it didn't work.
+# Slicing takes the characters up to but not including the index position specified.
+# I thought if I tried to get 2 characters from a 2 character string, I would get an error.
+# Oddly enough, for this to work with an empty string, I had to slice [:0]
+# I know there has to be a better way to do this than my solution.
+
+# Here is the CodingBat solution with their comments:
+
+def front3(str):
+  # Figure the end of the front
+  front_end = 3
+  if len(str) < front_end:
+    front_end = len(str)
+  front = str[:front_end]
+  return front + front + front 
+  
+  # Could omit the if logic, and write simply front = str[:3]
+  # since the slice is silent about out-of-bounds conditions.
+  
+# Well, that solution is certainly better than mine. Much cleaner.
+
+# This is the end of the Warmup-1 exercises from CodingBat.
+
+
 
 
 
