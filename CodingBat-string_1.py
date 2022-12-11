@@ -68,8 +68,43 @@ def extra_end(str):
 #############
 
 # CodingBat
+# https://codingbat.com/prob/p184816
+# first_two
+# Given a string, return the string made of its first two chars, so the String "Hello" yields "He". If the string is shorter than length 2, return whatever there is, so "X" yields "X", and the empty string "" yields the empty string "". 
+# Here's my code...
 
+def first_two(str):
+  if len(str) < 2:
+    return str
+  else:
+    return str[:2]
 
+# I got another gold star!
+# Their solution was very close to mine.
+# This is theirs...
+
+def first_two(str):
+  if len(str) >= 2:
+    return str[:2]
+  else:
+    return str
+
+#############
+
+# CodingBat
+# https://codingbat.com/prob/p107010
+# first_half
+# Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+# Based on the instructions, I believe I am to assume the given string is even.
+# Here's my solution...
+
+def first_half(str):
+  return str[:(len(str) / 2)]
+  
+
+#############
+
+# CodingBat
 
 
 
